@@ -13,6 +13,7 @@ import BasePage from "./components/Layout/BasePage";
 const waitFor = Tag => props => <Tag {...props} />;
 
 const SingleView = lazy(() => import("./components/SingleView/SingleView"));
+const Login = lazy(() => import("./components/Login/login"));
 const SubMenu = lazy(() => import("./components/SubMenu/SubMenu"));
 const contacts = lazy(() => import("./components/Contacts/contacts"));
 const contactDetails = lazy(() =>
@@ -66,6 +67,7 @@ const Routes = ({ location }) => {
                   <Route path="/singleview" component={waitFor(SingleView)} />
                   <Route path="/submenu" component={waitFor(SubMenu)} />
                   <Route path="/contacts" component={waitFor(contacts)} />
+                  <Route path="/login" component={waitFor(Login)} />
                   <Route
                     path="/contactDetails/:id"
                     component={waitFor(contactDetails)}

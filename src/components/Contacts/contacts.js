@@ -1,13 +1,25 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { GetContacts } from "./../../services/DummyData";
+import AuthService from './../../services/AuthService';
 
 class contacts extends Component {
+  constructor(){
+    super();
+    this.Auth = new AuthService();
+}
+
   state = {
     contacts: []
   };
 
   componentDidMount() {
+    console.log ("here");
+    if(!this.Auth.loggedIn()){
+      console.log ("there");
+        this.props.history.replace('/login');
+    }
+    
     //Axios call to get data...
     var data = GetContacts;
     this.setState({ contacts: data });

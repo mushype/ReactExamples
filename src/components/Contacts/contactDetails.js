@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import { GetContacts } from "./../../services/DummyData";
+import AuthService from './../../services/AuthService';
 
 class contactDetails extends Component {
+  constructor(){
+    super();
+
+    this.Auth = new AuthService();
+}
+
   state = {
     contact: {
       id: 1,
@@ -30,6 +37,7 @@ class contactDetails extends Component {
   render() {
     return (
       <div>
+                            <button onClick={this.Auth.logout()}>Logout</button>
         contact details
         {/* These render fine */}
         <p>{this.state.contact.forename}</p>
