@@ -1,4 +1,5 @@
 import decode from 'jwt-decode';
+import store from 'store';
 export default class AuthService {
     constructor(domain) {
         this.domain = domain || 'http://localhost:8080'
@@ -47,19 +48,25 @@ export default class AuthService {
 
     setToken(idToken) {
         // Saves user token to localStorage
-        localStorage.setItem('id_token', idToken)
+        //localStorage.setItem('id_token', idToken)
+        //store.set('token', idToken);
+        window.sessionStorage.setItem("token", idToken);
     }
 
     getToken() {
         // Retrieves the user token from localStorage
         console.log("localstorage-getitem" + localStorage.getItem('id_token'));
-        return localStorage.getItem('id_token')
+        //return localStorage.getItem('id_token')
+        //return store.get('token');
+        return window.sessionStorage.getItem("token");
     }
 
     logout() {
         console.log("removing item");
         // Clear user token and profile data from localStorage
-        localStorage.removeItem('id_token');
+        //localStorage.removeItem('id_token');
+        store.remove('token');
+        window.sessionStorage.setItem("token", "");
     }
 
     getProfile() {

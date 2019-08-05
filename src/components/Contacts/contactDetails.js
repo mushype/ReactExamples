@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { GetContacts } from "./../../services/DummyData";
 import AuthService from './../../services/AuthService';
+import store from 'store';
 
 class contactDetails extends Component {
   constructor(){
@@ -32,12 +33,14 @@ class contactDetails extends Component {
     var id = this.props.match.params.id;
     var data = GetContacts.find(contact => contact.id == id);
     this.setState({ contact: data });
+    var token = store.get('token');
+    console.log("token pete=" + token);
   }
 
   render() {
     return (
       <div>
-                            <button onClick={this.Auth.logout()}>Logout</button>
+           
         contact details
         {/* These render fine */}
         <p>{this.state.contact.forename}</p>

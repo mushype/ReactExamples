@@ -12,6 +12,10 @@ const Menu = [
 
     icon: "icon-people",
     translate: "sidebar.nav.DELIVERIES"
+  },
+  {
+    name: "Axios Examples",
+    path: "/axiosscreen"
   }
 
   // {

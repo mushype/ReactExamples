@@ -7,6 +7,7 @@ import 'core-js/es6/promise';
 import 'core-js/es7/object';
 import 'core-js/es7/array';
 import 'raf/polyfill';
+import './middlewares/network';
 
 import React from 'react';
 import ReactDOM from 'react-dom';

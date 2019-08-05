@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { GetContacts } from "./../../services/DummyData";
 import AuthService from './../../services/AuthService';
+import store from 'store';
 
 class contacts extends Component {
   constructor(){
@@ -23,6 +24,10 @@ class contacts extends Component {
     //Axios call to get data...
     var data = GetContacts;
     this.setState({ contacts: data });
+
+    var token = store.get('token');
+    //console.log("token pete=" + token);
+    console.log("token" + window.sessionStorage.getItem("token"));
   }
 
   render() {
