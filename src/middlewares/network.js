@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Set URL globally
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InBldGVyZ29vY2giLCJBcHBsaWNhdGlvbk5hbWUiOiJWTVMgQWRtaW4iLCJMb2dpblR5cGUiOiJ1c2VyIiwibmJmIjoxNTY0NTgyMjQyLCJleHAiOjE1NjUxODcwNDIsImlhdCI6MTU2NDU4MjI0Mn0.Bpt9ao8FdjADiVwywSJknrtMd_MDlJ2lV9cWG367EZE";
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6InRlc3RAYWFhLmNvbSIsIkFwcGxpY2F0aW9uTmFtZSI6IlZNUyBBZG1pbiIsIkxvZ2luVHlwZSI6InVzZXIiLCJuYmYiOjE1NjUyNjcyMDcsImV4cCI6MTU2NTg3MjAwNywiaWF0IjoxNTY1MjY3MjA3fQ.Zm95xHk2wiQ4JlatkrGYZLFTqTD1jpgo9bL5Of9pN4M";
 axios.defaults.baseURL = 'http://localhost:64021/core';
  axios.defaults.headers.common = {
    'Authorization': `bearer ${token}`

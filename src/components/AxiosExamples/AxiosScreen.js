@@ -20,7 +20,7 @@ class AxiosScreen extends Component{
         var postData = {
             forename:"pete", 
             surname:"gooch",
-            email:"abc@ftiddddd.com"
+            email:"abdddaaadc@ftiddsssddd.com"
         }
         try{
            var response = await callPostAsync("api/v1/people", postData);

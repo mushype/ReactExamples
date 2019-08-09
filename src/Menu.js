@@ -16,6 +16,15 @@ const Menu = [
   {
     name: "Axios Examples",
     path: "/axiosscreen"
+  },
+  {
+    name: "Customers",
+    path: "/customers"
+  },
+
+  {
+    name: "users",
+    path: "/users"
   }
 
   // {

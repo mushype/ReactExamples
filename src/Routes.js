@@ -16,6 +16,8 @@ const SingleView = lazy(() => import("./components/SingleView/SingleView"));
 const Login = lazy(() => import("./components/Login/login"));
 const SubMenu = lazy(() => import("./components/SubMenu/SubMenu"));
 const contacts = lazy(() => import("./components/Contacts/contacts"));
+const customers = lazy(() => import("./components/Customers/Customers"));
+const users = lazy(() => import("./components/Users/Users"));
 const AxiosScreen = lazy(() => import("./components/AxiosExamples/AxiosScreen"));
 
 const contactDetails = lazy(() =>
@@ -70,6 +72,8 @@ const Routes = ({ location }) => {
                   <Route path="/submenu" component={waitFor(SubMenu)} />
                   <Route path="/contacts" component={waitFor(contacts)} />
                   <Route path="/login" component={waitFor(Login)} />
+                  <Route path="/customers" component={waitFor(customers)} />
+                  <Route path="/users" component={waitFor(users)} />
                   <Route path="/axiosscreen" component={waitFor(AxiosScreen)} />
                   <Route
                     path="/contactDetails/:id"
